@@ -174,7 +174,6 @@
           <name>CCDefines</name>
           <state>STM32F40_41xx</state>
           <state>USE_STDPERIPH_DRIVER</state>
-          <state>FEATURE_HSE_OSC16=1</state>
         </option>
         <option>
           <name>CCPreprocFile</name>
@@ -928,7 +927,7 @@
         </option>
         <option>
           <name>IarchiveOutput</name>
-          <state>C:\Users\hwpark\Documents\STM32\testplatform_stm32f405rg\Libraries\STM32F4xx_StdPeriph_Driver\Debug\Exe\STM32F4_StdPeriph_Driver.a</state>
+          <state>C:\Users\hwpark\Documents\Project\myCortex-STM32F4\Libraries\STM32F4xx_StdPeriph_Driver\Debug\Exe\STM32F4_StdPeriph_Driver.a</state>
         </option>
       </data>
     </settings>
