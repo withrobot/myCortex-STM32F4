@@ -552,9 +552,11 @@ static void SetSysClock(void)
 
 #if defined (STM32F40_41xxx)
     /* Configure Flash prefetch, Instruction cache, Data cache and wait state */
-// 20131217 hwpark. errata sheet. rev.A
-//    FLASH->ACR = FLASH_ACR_PRFTEN | FLASH_ACR_ICEN |FLASH_ACR_DCEN |FLASH_ACR_LATENCY_6WS;
-    FLASH->ACR = FLASH_ACR_ICEN | FLASH_ACR_DCEN | FLASH_ACR_LATENCY_5WS;
+    // 20131217 hwpark. errata sheet. rev.A
+    if (DBGMCU->IDCODE & DBGMCU_IDCODE_REV_ID == 0x20000000)    // revision A
+        FLASH->ACR = FLASH_ACR_ICEN | FLASH_ACR_DCEN | FLASH_ACR_LATENCY_5WS;
+    else    // revision Z or later
+        FLASH->ACR = FLASH_ACR_PRFTEN | FLASH_ACR_ICEN |FLASH_ACR_DCEN |FLASH_ACR_LATENCY_5WS;
 #endif /* STM32F40_41xxx  */
 
 #if defined (STM32F401xx)
