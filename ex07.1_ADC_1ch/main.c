@@ -16,6 +16,9 @@ int main()
     GPIO_InitTypeDef GPIO_InitStructure;
     ADC_InitTypeDef ADC_InitStructure;
     ADC_CommonInitTypeDef ADC_CommonInitStructure;
+    unsigned short adc_result;
+    float volt;
+    int resistor;
 
     LED_Init();
     LED_R_ON();
@@ -82,7 +85,10 @@ int main()
 
         if (ADC_GetFlagStatus(ADC1, ADC_FLAG_EOC) == SET)       // ADC 완료까지 대기
         {
-            printf("%d\r\n", ADC_GetConversionValue(ADC1));     // ADC 결과 읽어 출력
+            adc_result = ADC_GetConversionValue(ADC1);
+            volt = (float)adc_result * 3.3 / 4096.;
+            resistor = adc_result * 10000 / 4096;
+            printf("%d,%.2f,%d\r\n", adc_result, volt, resistor);     // ADC 결과 읽어 출력
         }
     }
 
