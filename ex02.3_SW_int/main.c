@@ -21,23 +21,23 @@ int main()
 
 }
 
-// SW1 : PE0(EXTI0) Interrupt Handler
+// SW1 : PA0(EXTI0) Interrupt Handler
 void EXTI0_IRQHandler(void)
 {
-    if (EXTI_GetITStatus(EXTI_Line0) != RESET)
+    if (EXTI_GetITStatus(SW_1_EXTI_LINE) != RESET)
     {
         LED_R_TOGGLE();
-        EXTI_ClearITPendingBit(EXTI_Line0);
+        EXTI_ClearITPendingBit(SW_1_EXTI_LINE);
     }
 }
 
-// SW2 : PE1(EXTI1) Interrupt Handler
-void EXTI1_IRQHandler(void)
+// SW2 : PB10(EXTI10) Interrupt Handler
+void EXTI15_10_IRQHandler(void)
 {
-    if (EXTI_GetITStatus(EXTI_Line1) != RESET)
+    if (EXTI_GetITStatus(SW_2_EXTI_LINE) != RESET)
     {
         LED_G_TOGGLE();
-        EXTI_ClearITPendingBit(EXTI_Line1);
+        EXTI_ClearITPendingBit(SW_2_EXTI_LINE);
     }
 }
 

@@ -4,21 +4,21 @@
 #include "stm32f4xx.h"
 
 
-#define SW_1_PERIPH             RCC_AHB1Periph_GPIOE
-#define SW_1_GPIO_PORT          GPIOE
+#define SW_1_PERIPH             RCC_AHB1Periph_GPIOA
+#define SW_1_GPIO_PORT          GPIOA
 #define SW_1_GPIO_PIN           GPIO_Pin_0
 #define SW_1_EXTI_IRQn          EXTI0_IRQn
-#define SW_1_EXTI_PORTSOURCE    EXTI_PortSourceGPIOE
+#define SW_1_EXTI_PORTSOURCE    EXTI_PortSourceGPIOA
 #define SW_1_EXTI_PINSOURCE     EXTI_PinSource0
 #define SW_1_EXTI_LINE          EXTI_Line0
 
-#define SW_2_PERIPH             RCC_AHB1Periph_GPIOE
-#define SW_2_GPIO_PORT          GPIOE
-#define SW_2_GPIO_PIN           GPIO_Pin_1
-#define SW_2_EXTI_IRQn          EXTI1_IRQn
-#define SW_2_EXTI_PORTSOURCE    EXTI_PortSourceGPIOE
-#define SW_2_EXTI_PINSOURCE     EXTI_PinSource1
-#define SW_2_EXTI_LINE          EXTI_Line1
+#define SW_2_PERIPH             RCC_AHB1Periph_GPIOB
+#define SW_2_GPIO_PORT          GPIOB
+#define SW_2_GPIO_PIN           GPIO_Pin_10
+#define SW_2_EXTI_IRQn          EXTI15_10_IRQn
+#define SW_2_EXTI_PORTSOURCE    EXTI_PortSourceGPIOB
+#define SW_2_EXTI_PINSOURCE     EXTI_PinSource10
+#define SW_2_EXTI_LINE          EXTI_Line10
 
 #define SW_1_INIT()             SW_X_INIT(1)
 #define SW_2_INIT()             SW_X_INIT(2)
