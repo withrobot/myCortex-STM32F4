@@ -55,7 +55,7 @@ int main()
 
     /* Compute the prescaler value */
     SystemCoreClockUpdate();
-    PrescalerValue = (uint16_t) (SystemCoreClock / TIMER_PRESCALER_FREQ) - 1;   // timer base counter에 1MHz 입력
+    PrescalerValue = (uint16_t) (SystemCoreClock / 2 / TIMER_PRESCALER_FREQ) - 1;   // timer base counter에 1MHz 입력
 
     /* Time base configuration */
     TIM_TimeBaseStructure.TIM_Period = TIMER_PRESCALER_FREQ / PWM_FREQ - 1;     // 1kHz timer
