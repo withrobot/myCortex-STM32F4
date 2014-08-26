@@ -1,6 +1,6 @@
 myCortex-STM32F4
 ================
 
-ÀÌ ÀúÀå¼Ò´Â [À§µå·Îº¿](http://withrobot.com)¿¡¼­ Á¦ÀÛÇÑ myCortex-STM32F4 MCU º¸µåÀÇ ¿¹Á¦¸¦ ¹èÆ÷ÇÏ°í ÀÖ½À´Ï´Ù.
+ì´ ì €ìž¥ì†ŒëŠ” [ìœ„ë“œë¡œë´‡](http://withrobot.com)ì—ì„œ ì œìž‘í•œ myCortex-STM32F4 MCU ë³´ë“œì˜ ì˜ˆì œë¥¼ ë°°í¬í•˜ê³  ìžˆìŠµë‹ˆë‹¤.
 
-º» ¿¡Á¦ ¼Ò½º ÄÚµå¿¡ °üÇÑ ¼³¸í°ú »ç¿ë ¹æ¹ýÀº ¿ìÃø ¸Þ´ºÀÇ [Wiki ÆäÀÌÁö](https://github.com/withrobot/myCortex-STM32F4/wiki)¸¦ ÂüÁ¶ÇÏ½Ã±â ¹Ù¶ø´Ï´Ù.
+ë³¸ ì˜ˆì œ ì†ŒìŠ¤ ì½”ë“œì— ê´€í•œ ì„¤ëª…ê³¼ ì‚¬ìš© ë°©ë²•ì€ ìš°ì¸¡ ë©”ë‰´ì˜ [Wiki íŽ˜ì´ì§€](https://github.com/withrobot/myCortex-STM32F4/wiki)ë¥¼ ì°¸ì¡°í•˜ì‹œê¸° ë°”ëžë‹ˆë‹¤.
