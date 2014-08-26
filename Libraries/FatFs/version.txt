@@ -1,0 +1,31 @@
+
+
+FatFs - Generic FAT File System Module
+http://elm-chan.org/fsw/ff/00index_e.html
+
+ChaN
+0.9b
+Release : 2013년 1월 24일
+
+
+================================================================================
+Patch : 2013년 3월 15일
+Patches for FatFs R0.09b
+
+FatFs R0.09b has been released at January 24, 2013.
+
+March 15, 2013
+------------------------------------------------------------------------------
+f_open(), f_mkdir() and f_setlabel() function can report FR_NO_FILE in case of
+insufficient free directory entry. It must be FR_DENIED for such case.
+To fix this bug, apply following patch to the ff.c.
+
+--- ff.c              Thu Jan 24 00:06:54 2013
++++ ff_patched_1.c    Fri Mar 15 19:57:36 2013
+@@ -1226,4 +1226,5 @@
+         } while (res == FR_OK);
+     }
++    if (res == FR_NO_FILE) res = FR_DENIED;
+     return res;
+ }
+
