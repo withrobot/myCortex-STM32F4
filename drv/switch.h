@@ -55,7 +55,7 @@
         do {                                                                    \
              EXTI_InitTypeDef EXTI_InitStructure;                               \
             NVIC_InitTypeDef NVIC_InitStructure;                                \
-            RCC_APB2PeriphClockCmd(SW_##X##_PERIPH, ENABLE);                    \
+            RCC_AHB1PeriphClockCmd(SW_##X##_PERIPH, ENABLE);                    \
             RCC_APB2PeriphClockCmd(RCC_APB2Periph_SYSCFG, ENABLE);              \
             SYSCFG_EXTILineConfig(SW_##X##_EXTI_PORTSOURCE, SW_##X##_EXTI_PINSOURCE);\
             NVIC_InitStructure.NVIC_IRQChannel = SW_##X##_EXTI_IRQn;            \
