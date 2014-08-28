@@ -1,6 +1,6 @@
 
 /*
-  ex03_assert
+  ex03.1_assert
 
   ASSERT 동작 확인
  */

@@ -1,6 +1,6 @@
 
 /*
-  ex05.2_delay
+  ex03.2_delay
 
   delay 구현 예제
   타이머를 사용하지 않으면서 정확한 시간의 delay를 구현.
