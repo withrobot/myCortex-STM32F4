@@ -59,25 +59,6 @@ void DebugComPort_Init(void)
     LLIO_Init(115200);
 }
 
-#if 0
-/**
-  * @brief  Retargets the C library printf function to the USART.
-  * @param  None
-  * @retval None
-  */
-PUTCHAR_PROTOTYPE
-{
-  /* Place your implementation of fputc here */
-  /* e.g. write a character to the USART */
-  USART_SendData(EVAL_COM1, (uint8_t) ch);
-
-  /* Loop until the end of transmission */
-  while (USART_GetFlagStatus(EVAL_COM1, USART_FLAG_TC) == RESET)
-  {}
-
-  return ch;
-}
-#endif
 #endif /* SERIAL_DEBUG */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
